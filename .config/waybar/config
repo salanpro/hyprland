@@ -1,0 +1,86 @@
+{
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["pulseaudio/slider"],
+    "modules-right": ["custom/language","network", "battery","upower","backlight", "pulseaudio", "clock","custom/power"],
+
+    "custom/power": {
+        "format" : "⭘ ",
+        "tooltip": false,
+        "on-click": "notify-send Hola",
+    },
+    "backlight": {
+        "format" : "☀{percent}%",
+        "tooltip": true,
+        //"on-click": "notify-send Hola",
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        //"format-icons":{"1":"M", "active": "AC"},
+        "sort-by-number":true
+        
+    },
+
+
+    "network": {
+        "format-wifi": " ",
+        "format-ethernet": "  Ethernet",
+        "format-linked": "  Linked (No IP)",
+        "format-disconnected": "  Disconnected",
+        "tooltip": true,
+        "tooltip-format": "{essid} \n {ipaddr}",
+        "on-click": "alacritty -e nmtui",
+    },
+
+    "battery": {
+        "states": {
+            "good": 85,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        /*"format-plugged": " {capacity}%",*/
+        "format-charging": " {capacity}%",
+        "format-alt": "{icon} {capacity}%",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "interval": 60,
+        "tooltip": false,
+        "tooltip-format": "{time}",
+        "cursor": false
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "  {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-bluetooth-muted": "  {volume}%",
+        "format-icons": {
+            "headphone": " ",
+            "headset": " ",
+            "default": [" "],
+        },
+        //"on-click": "pavucontrol",
+    },
+
+    "pulseaudio/slider": {
+        "min":0,
+        "max":100,
+        "orientation":"horizontal",
+    },
+
+    "clock": {
+        "format": "{:%a %d/%m/%Y ~ %H:%M}",
+        "tooltip-format": "<span size='15000'><tt>{calendar}</tt></span>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months": "<span color='#F5C2E7'><b>{}</b></span>",
+                "weekdays": "<span color='#89B4FA'><b>{}</b></span>",
+                "days": "<span color='#CDD6F4'><b>{}</b></span>",
+                "today": "<span color='#F9E2AF'><b>{}</b></span>",
+            }
+        },
+        "on-click": "swaync-client -t -sw",
+    }
+}

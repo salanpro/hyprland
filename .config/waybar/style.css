@@ -1,0 +1,118 @@
+* {
+    font-family: "Adwaita";
+    font-size: 15px;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 0px;
+    min-height: 0;
+}
+
+window,
+tooltip {
+    background-color: #1e1e2e;
+}
+
+#waybar {
+    background: alpha(#1e1e2e, 1);
+    border-radius: 0;
+}
+
+#workspaces {
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px ;
+    padding: 0px;
+    border: 0px;
+}
+
+#workspaces button {
+    color: #cdd6f4;
+    border: none;
+    padding: 0 5px;
+}
+#workspaces button:hover {
+    color: #f38ba8;
+    transition: none;
+    border-bottom: 1px solid #f38ba8;
+    padding: 0 8px;
+}
+
+#workspaces button.active {
+    color: #f38ba8;
+    border: 2px solid #f38ba8;
+    padding: 0 8px;
+    margin: 0 2px;
+}
+
+#workspaces button.urgent {
+    background-color: #f44336;
+    padding: 0 8px;
+}
+
+
+#bluetooth {
+    color: #f9e2af;
+}
+
+#network {
+    color: #a6e3a1;
+}
+
+#battery {
+    color: #cba6f7;
+}
+
+#pulseaudio {
+    color: #fab387;
+}
+
+#clock {
+    margin-right: 10px;
+    color: #89b4fa;
+}
+
+#custom-power {
+    margin-left: 10px;
+    padding: 0px 10px 0 15px;
+}
+
+#backlight{
+    color:#f44336;
+    margin-right:0px ;
+}
+
+#pulseaudio-slider {
+    background-color: #e1866f;
+    min-height: 5px;
+    min-width: 150px;
+    border-radius: 10px;
+    opacity: 1;
+    box-shadow: none;
+    border: 10px;
+}
+
+
+#pulseaudio-slider slider {
+    
+    background-image: linear-gradient(black);
+    min-width: 10px;
+    min-height: 10px;
+    opacity: 1;
+    border-radius: 2px;
+    background-color: green;
+    }
+
+#pulseaudio-slider trough {
+    color: #f44336;
+    background-color:#3f4240;
+    min-height: 10px;
+    min-width: 100px;
+    border-radius: 1px;
+}
+#pulseaudio-slider highlight {
+    color: #f44336;
+    background-color: #3f4240;
+    min-height: 10px;
+    min-width: 100px;
+    border-radius: 1px;
+}
