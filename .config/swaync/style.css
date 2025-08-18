@@ -1,0 +1,157 @@
+
+* {
+    font-family: "Fira Sans Semibold";
+    font-size: 18fpx;
+}
+
+.control-center {
+    border: 1px solid #f55858;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: -3px;
+}
+
+
+button {
+    border: 0px;
+    min-width: 35px;
+    background: #f55858;
+    color: #eceff4;
+}
+
+button:hover {
+    color: white;
+    background-color: alpha(rgb(255, 255, 255),0.8);
+}
+
+.notification-group-header {
+    font-size: 12px;
+}
+
+.notification {
+    border: 1px solid #f55858;
+    border-radius: 0px;
+    margin-right: -6px;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+    color: #ffffff;
+    background: transparent;
+}
+
+
+.widget-dnd switch:checked {
+    background: #f55858;
+}
+
+.close-button {
+    background: #f55858;
+    text-shadow: none;
+    padding: 0;
+    border-radius: 15px;
+    margin-top: 9px;
+    margin-right: 10px;
+    min-width: 24px;
+    min-height: 24px;
+}
+
+.close-button:hover {
+    background: #ffffff;
+}
+
+.notification-group .notification-group-close-button .close-button {
+    margin: 15px 22px;
+}
+
+.widget-volume {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    margin-top: -25px;
+}
+
+.widget-volume scale {
+    margin: 0px 0px 0px 0px;
+}
+
+.widget-volume scale trough {
+    min-height: 5px;
+    border-radius: 3px;
+    background: #4c566a;
+}
+
+.widget-volume scale highlight {
+    border-radius: 3px;
+    background: #f55858;
+}
+
+.widget-volume scale slider {
+    min-width: 1px;
+    min-height: 1px;
+    border-radius: 50%;
+    background: #eceff4;
+    border: 2px solid #f55858;
+}
+
+
+.widget-backlight {
+    background: transparent;
+    border: none;
+    padding: 8px;
+    margin-top: -25px;
+}
+
+
+.widget-backlight scale {
+    margin: 0px 0px 0px 0px;
+}
+
+.widget-backlight scale trough {
+    min-height: 5px; /*ancho barra*/
+    border-radius: 3px;
+    background: #4c566a;
+}
+
+.widget-backlight scale highlight {
+    border-radius: 3px;
+    background: #f55858;
+}
+
+.widget-backlight scale slider {
+    min-width: 1px;
+    min-height: 1px; /*ancho circulo*/
+    border-radius: 50%;
+    background: #eceff4;
+    border: 2px solid #f55858;
+}
+
+.widget-mpris {
+    border: 0px;
+    background: transparent;
+    color: #eceff4;
+    padding: 5px;
+    margin: 5px;
+}
+
+.widget-mpris-player {
+    border: 2px solid #f55858;
+    border-radius: 10px;
+    background: #2e3440;
+    color: #eceff4;
+    margin: 0;
+}
+
+.widget-mpris-title {
+    color: #eceff4;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 2px 0;
+}
+
+.widget-mpris-subtitle {
+    color: #d8dee9;
+    font-size: 11px;
+    opacity: 0.8;
+    margin: 2px 0;
+}

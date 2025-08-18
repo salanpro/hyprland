@@ -1,0 +1,77 @@
+{
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["hyprland/language","network","pulseaudio","upower", "custom/nots"],
+
+    "custom/nots": {
+        "format": "󱨩",
+        "tooltip": false,
+        "on-click": "swaync-client -t -sw",
+    },
+
+    "backlight": {
+        "format" : "☀{percent}%",
+        "tooltip": true,
+        //"on-click": "notify-send Hola",
+    },
+
+  "hyprland/workspaces": {
+  "on-click": "activate",
+  "sort-by-number": true,
+  "format": "{name}",
+  "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
+    },
+  "persistent-workspaces": {
+      "*": 5
+    }
+},
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%d %B %Y}",
+    "tooltip": false,
+    "on-click-right": "gsimplecal"
+    
+  },
+
+
+    "network": {
+        "format-wifi": "󰖩",
+        "format-ethernet": "  Ethernet",
+        "format-linked": " Linked (No IP)",
+        "format-disconnected": "",
+        "format-disabled": "󰖪",
+        "tooltip": true,
+        "tooltip-format": "{essid} \n {ipaddr}",
+        "on-click": "alacritty -e nmtui",
+    },
+
+    "pulseaudio": {
+        "format": "{icon}{volume}%",
+        "format-muted": " {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-bluetooth-muted": "  {volume}%",
+        "tooltip": false,
+        "format-icons": {
+            "headphone": " ",
+            "headset": " ",
+            "default": [" "],
+        },
+        "on-click": "pavucontrol",
+    },
+
+    "upower": {
+     "icon-size": 14,
+     "hide-if-empty": true,
+     "tooltip": false,
+     "tooltip-spacing": 20,
+},
+
+"hyprland/language": {
+    "format": "{shortDescription}",
+    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+    "tooltip":false
+}
+}
