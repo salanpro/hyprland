@@ -20,3 +20,6 @@ and paste this
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, monospace"
 }
 ```
+
+### Change the icons
+In terminal type ``` nwg-look ```
