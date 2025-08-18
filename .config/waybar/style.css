@@ -99,7 +99,7 @@ font-size: 0;
 }
 
 
-#pulseaudio {
+#wireplumber {
 color: #ffffff;
 min-width: 50px;
 margin-left: 3px;
@@ -107,7 +107,7 @@ margin-right: 3px;
 font-size: 14px;
 }
 
-#pulseaudio.muted {
+#wireplumber.muted {
 color: #f16c6c;
 min-width: 50px;
 font-size: 14px;
