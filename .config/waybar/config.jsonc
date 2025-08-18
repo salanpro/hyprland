@@ -1,7 +1,7 @@
 {
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["hyprland/language","network","pulseaudio","upower", "custom/nots"],
+    "modules-right": ["hyprland/language","network","wireplumber","upower", "custom/nots"],
 
     "custom/nots": {
         "format": "󱨩",
@@ -48,7 +48,7 @@
         "on-click": "alacritty -e nmtui",
     },
 
-    "pulseaudio": {
+    "wireplumber": {
         "format": "{icon}{volume}%",
         "format-muted": " {volume}%",
         "format-bluetooth": " {volume}%",
