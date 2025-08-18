@@ -1,7 +1,7 @@
 
 echo "[+] Updating system and installing base packages..."
 sudo pacman -Syu
-sudo pacman -S pavucontrol gsimplecal pipewire-jack alsa-firmware alsa-utils nautilus alacritty alsa-utils base-devel brightnessctl fastfetch swaync firefox gnome-text-editor hyprland sddm waybar wofi hyprlock hypridle bluez blueman-manager hyprshot loupe hyprpaper numlockx vulkan-radeon mesa tlp tlp-rdw nwg-look ttf-fira-code noto-fonts ttf-jetbrains-mono
+sudo pacman -S pavucontrol gsimplecal pipewire-jack alsa-firmware alsa-utils nautilus alacritty alsa-utils base-devel brightnessctl fastfetch swaync firefox gnome-text-editor hyprland sddm waybar wofi hyprlock hypridle bluez blueman hyprshot loupe hyprpaper numlockx vulkan-radeon mesa tlp tlp-rdw nwg-look ttf-fira-code noto-fonts ttf-jetbrains-mono
 
 
 echo "[+] Enabling services..."
