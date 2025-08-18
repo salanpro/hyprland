@@ -27,7 +27,13 @@ button:hover {
 .notification-group-header {
     font-size: 12px;
 }
+.notification progressbar progress {
+    background-color: #f55858;
+}
 
+.notification progressbar trough {
+    background-color: #4c566a;
+}
 .notification {
     border: 1px solid #f55858;
     border-radius: 0px;
