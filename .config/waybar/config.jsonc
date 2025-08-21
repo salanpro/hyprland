@@ -63,10 +63,9 @@
     },
 
     "upower": {
-     "icon-size": 14,
+     "icon-size": 24,
      "hide-if-empty": true,
      "tooltip": false,
-     "tooltip-spacing": 20,
 },
 
 "hyprland/language": {

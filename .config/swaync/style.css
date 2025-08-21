@@ -1,7 +1,7 @@
 
 * {
     font-family: "JetBrains Mono", "Fira Code", monospace;
-    font-size: 18fpx;
+    font-size: 20px;
 }
 
 .control-center {
@@ -9,14 +9,17 @@
     margin-top: 5px;
     margin-bottom: 10px;
     margin-right: -3px;
+
 }
 
 
 button {
     border: 0px;
-    min-width: 35px;
+    min-width: 60px;
+    min-height: 40px;
     background: #f55858;
     color: #eceff4;
+
 }
 
 button:hover {
@@ -82,7 +85,7 @@ button:hover {
 }
 
 .widget-volume scale trough {
-    min-height: 5px;
+    min-height: 8px;
     border-radius: 3px;
     background: #4c566a;
 }
@@ -93,9 +96,9 @@ button:hover {
 }
 
 .widget-volume scale slider {
-    min-width: 1px;
-    min-height: 1px;
-    border-radius: 50%;
+    min-width: 17px;
+    min-height: 17px;
+    border-radius: 100%;
     background: #eceff4;
     border: 2px solid #f55858;
 }
@@ -114,7 +117,7 @@ button:hover {
 }
 
 .widget-backlight scale trough {
-    min-height: 5px; /*ancho barra*/
+    min-height: 8px; /*ancho barra*/
     border-radius: 3px;
     background: #4c566a;
 }
@@ -125,9 +128,9 @@ button:hover {
 }
 
 .widget-backlight scale slider {
-    min-width: 1px;
-    min-height: 1px; /*ancho circulo*/
-    border-radius: 50%;
+    min-width: 17px;
+    min-height: 17px; /*ancho circulo*/
+    border-radius: 100%;
     background: #eceff4;
     border: 2px solid #f55858;
 }
@@ -136,8 +139,11 @@ button:hover {
     border: 0px;
     background: transparent;
     color: #eceff4;
-    padding: 5px;
-    margin: 5px;
+    margin: max(20px, 5%);
+
+}
+.widget-mpris button {
+min-width: 45px;
 }
 
 .widget-mpris-player {
@@ -146,18 +152,18 @@ button:hover {
     background: #2e3440;
     color: #eceff4;
     margin: 0;
+    min-height: 150px;
 }
 
 .widget-mpris-title {
     color: #eceff4;
-    font-size: 13px;
+    font-size: 24px;
     font-weight: bold;
-    margin: 2px 0;
 }
 
 .widget-mpris-subtitle {
     color: #d8dee9;
-    font-size: 11px;
+    font-size: 16px;
     opacity: 0.8;
     margin: 2px 0;
 }

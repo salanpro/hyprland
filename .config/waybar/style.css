@@ -1,7 +1,6 @@
 * {
 background-color: alpha(black, 0.0);
 font-family: "JetBrains Mono", "Fira Code", monospace;
-font-size: 16px;
 }
 
 .modules-left {
@@ -37,6 +36,7 @@ color: #ECEFF1;
 all: initial;
 padding: 0 8px;
 min-width: 9px;
+font-size: 20;
 }
 
 #workspaces button:hover {
@@ -62,62 +62,68 @@ border-radius: 0;
 
 #network{
 color: #ECEFF1;
-margin-left: 0px;
-margin-right: 5px;
+margin-left: -1px;
+margin-right: 9px;
+font-size: 20px;
+}
+#clock{
+font-size: 20px;
 }
 
 #network.disabled{
 color: #ECEFF1;
-margin-left: 0px;
-margin-right: 5px;
+margin-left: -1px;
+margin-right: 9px;
+font-size: 20px;
 }
 
 #network.disconected{
 color: #ECEFF1;
 margin-left: 0px;
 margin-right: 5px;
+font-size: 20px;
 }
 
 #network.linked{
 color: #ECEFF1;
 margin-left: 0px;
 margin-right: 5px;
+font-size: 20px;
+
 }
 
 #language {
 margin-left: 5px;
 margin-right: 5px;
 color: white;
-font-size: 15px;
+font-size: 20px;
 }
 
 #upower {
 color: white;
 margin-left: 0px;
 margin-right: 5px;
-font-size: 0;
+font-size: 18px;
 }
 
 
 #pulseaudio {
 color: #ffffff;
-min-width: 50px;
 margin-left: 3px;
-margin-right: 3px;
-font-size: 14px;
+margin-right: 0px;
+font-size: 18px;
 }
 
 #pulseaudio.muted {
 color: #f16c6c;
-min-width: 50px;
-font-size: 14px;
+font-size: 19px;
 }
 
 #custom-nots {
 margin-left: 5px;
 margin-right: 12px;
 color: white;    
-font-size: 18px;
+font-size: 25px;
 }
 
 tooltip {

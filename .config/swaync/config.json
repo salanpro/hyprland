@@ -14,14 +14,14 @@
     "notification-inline-replies": false,
     "notification-icon-size": 24,
     "notification-body-image-height": 100,
-    "notification-body-image-width": 100,
-    "notification-window-width": 300,
+    "notification-body-image-width": 200,
+    "notification-window-width": 350,
     "timeout": 6,
     "timeout-low": 2,
     "timeout-critical": 0,
-    "fit-to-screen": false,
-    "control-center-width": 300,
-    "control-center-height": 720,
+    "fit-to-screen": true,
+    "control-center-width": 410,
+    "control-center-height": 800,
     "keyboard-shortcuts": true,
     "image-visibility": "when-available",
     "transition-time": 200,
@@ -65,7 +65,7 @@
             "actions": [
                 {
                     "label": "",
-                    "command": "hyprlock"
+                    "command": "systemctl suspend"
                 },
                 {
                     "label": "󰝟",
