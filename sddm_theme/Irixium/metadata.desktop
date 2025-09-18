@@ -1,0 +1,17 @@
+[SddmGreeterTheme]
+Name=Irixium
+Description=Irixium
+Author=Mark Whittaker
+Copyright=
+License=CC-BY-SA
+Type=sddm-theme
+Version=4.0
+Website=https://www.pling.com/u/phob1an
+Screenshot=preview.jpg
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Email=phobian@tutanota.com
+Theme-Id=Irixium
+Theme-API=2.0
+QtVersion=6
