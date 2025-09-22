@@ -63,7 +63,7 @@
     },
 
     "upower": {
-     "icon-size": 24,
+     "icon-size": 18,
      "hide-if-empty": true,
      "tooltip": false,
 },
