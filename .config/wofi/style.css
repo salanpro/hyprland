@@ -1,11 +1,11 @@
 
 
 window {
-	background-color: alpha(#ffffff, .9);
+	background-color: alpha(#dfdfdf, 1.0);
 	color: white;
 	box-shadow: none;
 	border-radius: 0px;
-	border: 1px solid #f55858;
+	border: 1px solid #669466;
 }
 
 
@@ -14,7 +14,7 @@ window {
 	padding: 0.25em;
 	margin: 10 10 10 10;
     color: black;
-	border: 1px solid #f55858;
+	border: 1px solid #669466;
 	border-radius: 0px;
 
 }
@@ -28,7 +28,7 @@ window {
 }
 
 #entry:selected {
-	background: alpha(#f55858, .6);
+	background: alpha(#669466, .6);
 	box-shadow: none;
 	border-radius: 0px;
 }

@@ -80,8 +80,8 @@
                     "command": "reboot"
                 },
                 {
-                    "label": "",
-                    "command": "notify-send Boton inutil"
+                    "label": "",
+                    "command": "notify-send Noob"
                 },
                 {
                     "label": "",

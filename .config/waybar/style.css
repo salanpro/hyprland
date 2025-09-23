@@ -6,52 +6,51 @@ font-family: "JetBrains Mono", "Fira Code", monospace;
 .modules-left {
 padding: 0px;
 margin-left: 0;
-border-radius:0px;
+border-radius:20px;
 background: alpha(black,.6);
 box-shadow: none;
-border: 1px solid #f55858;
+border: 3px solid #669466;
 
 }
 
 .modules-right {
 margin-right: 0px;
 margin-left: 0px;
-border-radius: 0px;
-background: alpha(black,.6);
+border-radius: 20px;
+background: #000000;
 box-shadow: none;
-border: 1px solid #f55858;
+border: 3px solid #669466;
 }
 
 .modules-center {
 padding:5px;
-border-radius:0px;
+border-radius:20px;
 background: alpha(black,.6);
 box-shadow: none;
-border: 1px solid #f55858;
+border: 3px solid #669466;
 color: white
 }
 
 #workspaces button {
 color: #ECEFF1;
 all: initial;
-padding: 0 8px;
-min-width: 9px;
+padding-left: 8px;
+padding-right: 8px;
 font-size: 20;
 }
 
 #workspaces button:hover {
 border-bottom: 1px solid alpha(rgb(255, 255, 255),0.6);
-border-radius: 0;
+border-radius: 20px;
 background-color: alpha(rgb(255, 255, 255),0.8);
 }
 
 #workspaces button.active {
-color: #000000;
-background: rgba(0, 0, 0, 1);
-margin:0 0px;
-background-color: #ffffff;
-border-radius: 0;
-    
+color: #669466;
+border-radius: 18px;
+border: 3px solid #669466;
+background: #000000;
+
 }
 
 #workspaces button.urgent {
@@ -115,8 +114,8 @@ font-size: 18px;
 }
 
 #pulseaudio.muted {
-color: #f16c6c;
-font-size: 19px;
+color: #ffffff;
+font-size: 18px;
 }
 
 #custom-nots {
@@ -128,9 +127,9 @@ font-size: 25px;
 
 tooltip {
 border-radius: 4px;
-background-color: #7a4141;    
+background-color: #ffffff; 
 }
 
 tooltip label {
-color: white;
+color: black;
 }

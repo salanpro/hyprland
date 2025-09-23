@@ -5,10 +5,11 @@
 }
 
 .control-center {
-    border: 1px solid #f55858;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    margin-right: -3px;
+    border: 4px solid #669466;
+    margin-top: 7px;
+    margin-bottom: 11px;
+    margin-right: -2px;
+    background: #2b2b2bfa;
 
 }
 
@@ -17,7 +18,7 @@ button {
     border: 0px;
     min-width: 60px;
     min-height: 40px;
-    background: #f55858;
+    background: #669466;
     color: #eceff4;
 
 }
@@ -31,16 +32,18 @@ button:hover {
     font-size: 12px;
 }
 .notification progressbar progress {
-    background-color: #f55858;
+    background-color: #669466;
 }
 
 .notification progressbar trough {
     background-color: #4c566a;
 }
 .notification {
-    border: 1px solid #f55858;
-    border-radius: 0px;
-    margin-right: -6px;
+    border: 3px solid #669466;
+    border-radius: 15px;
+    margin-right: 0px;
+    margin-top: 9px;
+    background: #2b2b2bfa;
 }
 
 .notification-default-action:hover,
@@ -51,11 +54,11 @@ button:hover {
 
 
 .widget-dnd switch:checked {
-    background: #f55858;
+    background: #669466;
 }
 
 .close-button {
-    background: #f55858;
+    background: #669466;
     text-shadow: none;
     padding: 0;
     border-radius: 15px;
@@ -92,7 +95,7 @@ button:hover {
 
 .widget-volume scale highlight {
     border-radius: 3px;
-    background: #f55858;
+    background: #669466;
 }
 
 .widget-volume scale slider {
@@ -100,7 +103,7 @@ button:hover {
     min-height: 17px;
     border-radius: 100%;
     background: #eceff4;
-    border: 2px solid #f55858;
+    border: 2px solid #669466;
 }
 
 
@@ -124,7 +127,7 @@ button:hover {
 
 .widget-backlight scale highlight {
     border-radius: 3px;
-    background: #f55858;
+    background: #669466;
 }
 
 .widget-backlight scale slider {
@@ -132,7 +135,7 @@ button:hover {
     min-height: 17px; /*ancho circulo*/
     border-radius: 100%;
     background: #eceff4;
-    border: 2px solid #f55858;
+    border: 2px solid #669466;
 }
 
 .widget-mpris {
@@ -147,7 +150,7 @@ min-width: 45px;
 }
 
 .widget-mpris-player {
-    border: 2px solid #f55858;
+    border: 2px solid #669466;
     border-radius: 10px;
     background: #2e3440;
     color: #eceff4;
