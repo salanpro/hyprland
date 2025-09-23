@@ -19,8 +19,8 @@ mkdir -p ~/.config
 cp -r .config/* ~/.config/
 
 echo "[+] Setting sddm theme..."
-cp -r sddm_theme/Irixium /usr/share/sddm/themes
-cp sddm_theme/sddm.conf /etc/sddm.conf
+sudo cp -r sddm_theme/Irixium /usr/share/sddm/themes
+sudo cp sddm_theme/sddm.conf /etc/sddm.conf
 
 echo "[+] Copying wallpaper..."
 mkdir -p ~/Pictures/wallpaper/
