@@ -23,8 +23,8 @@ cp -r sddm_theme/Irixium /usr/share/sddm/themes
 cp sddm_theme/sddm.conf /etc/sddm.conf
 
 echo "[+] Copying wallpaper..."
-mkdir -p ~/Pictures
-cp wallpaper/* ~/Pictures/
+mkdir -p ~/Pictures/wallpaper/
+cp wallpaper/* ~/Pictures/wallpaper
 
 echo "[+] Copying .bashrc..."
 cp -f .bashrc ~/.bashrc

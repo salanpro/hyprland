@@ -7,5 +7,5 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-PS1='\[\e[1;37m\]\u\[\e[0m\]@\[\e[1;31m\]\h \[\e[1;33m\]\W\[\e[0m\]\$ '
+PS1='\[\e[1;37m\]\u\[\e[0m\]@\[\e[1;38;2;102;148;102m\]\h \[\e[1;33m\]\W\[\e[0m\]\$ '
 source ~/.local/share/blesh/ble.sh
