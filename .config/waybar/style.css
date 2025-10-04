@@ -17,7 +17,7 @@ border: 3px solid #669466;
 margin-right: 0px;
 margin-left: 0px;
 border-radius: 20px;
-background: #000000;
+background: alpha(black,.6);
 box-shadow: none;
 border: 3px solid #669466;
 }
@@ -54,9 +54,11 @@ background: #000000;
 }
 
 #workspaces button.urgent {
-background-color: #f37227;
-margin: 0 0px;
-border-radius: 0;
+color: #f37227;
+border-radius: 18px;
+border: 3px solid #f37227;
+background: #000000;
+
 }
 
 #network{

@@ -51,9 +51,9 @@
             "text": "Notification"
         },
         "mpris": {
-            "image-size": 50,
-            "image-radius": 0
-        },
+			"image-size": 96,
+			"image-radius": 12
+		},
         "volume": {
             "label": "󰕾"
         },
@@ -80,7 +80,7 @@
                     "command": "reboot"
                 },
                 {
-                    "label": "",
+                    "label": "",
                     "command": "notify-send Noob"
                 },
                 {

@@ -30,8 +30,8 @@ FocusScope {
 
     property color color: "white"
     property color borderColor: "#ababab"
-    property color focusColor: "#266294"
-    property color hoverColor: "#5692c4"
+    property color focusColor: "#2b7c3d"
+    property color hoverColor: "#67ad76"
     property color menuColor: "white"
     property color textColor: "black"
 

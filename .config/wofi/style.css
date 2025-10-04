@@ -1,7 +1,12 @@
 
+* {
+font-family: "JetBrains Mono", "Fira Code", monospace;
+font-weight: bold;
+}
+
 
 window {
-	background-color: alpha(#dfdfdf, 1.0);
+	background-color: alpha(#bebebe, 0.93);
 	color: white;
 	box-shadow: none;
 	border-radius: 0px;

@@ -26,7 +26,9 @@
     },
   "persistent-workspaces": {
       "*": 5
-    }
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
 },
   "clock": {
     "format": "{:%H:%M}",
@@ -63,7 +65,7 @@
     },
 
     "upower": {
-     "icon-size": 18,
+     "icon-size": 24,
      "hide-if-empty": true,
      "tooltip": false,
 },

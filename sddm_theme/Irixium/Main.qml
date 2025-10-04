@@ -61,7 +61,7 @@ Rectangle {
     Image {
         anchors.centerIn : parent
         id : promptbox
-        source : "assets/promptbox.svg"
+        source : "assets/promptbox.png"
         width : 620
         height : 340
 
@@ -84,7 +84,7 @@ Rectangle {
             anchors.verticalCenter : parent.verticalCenter
             spacing : 4
             Text {
-                color : "#2727f7"
+                color : "#669466"
                 text : textConstants.welcomeText.arg(sddm.hostName)
                 font.family : bolditalicFont.name
                 font.italic : true
