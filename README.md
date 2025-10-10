@@ -1,25 +1,24 @@
-### Hyprland Setup
-Clone this repository ``` git clone https://github.com/sergioalanpro/hyprland ```
-
-Enter the folder ``` cd hyprland/ ```
-
-run the script ``` ./setup.sh ```
-
-##
-
-### Vscode Settings (for font editor)
-Press
-``` Ctrl + Shit + p ``` then select ```Open settings(JSON) ```
-and paste this
-
+## Get started
+Clone this repository and run the script
+```bash
+git clone https://github.com/sergioalanpro/hyprland
+cd hyprland/
+./setup.sh 
 ```
-{
-    "editor.fontFamily": "JetBrainsMono Nerd Font, monospace",
-    "editor.fontSize": 18,
-    "editor.fontLigatures": true,
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, monospace"
-}
-```
+>It should be executable, if not then `chmod +x setup.sh`
+>
+After the script ends, reboot your system to apply all the changes
 
-### Change the icons
-In terminal type ``` nwg-look ```
+To change the icons press `MOD + R` to open rofi and the browse GTK Settings, or in terminal type `nwg-look` 
+
+## Features
+* Alacritty _( Terminal )_
+* Wofi _( App Launcher )_
+* Waybar _( Bar )_
+* Swaync _( Panel and notifications )_
+* Hyprlock _( Screen lock )_
+* Hypridle _( IDLE management )_
+* Hyprshot _( Screenshots )_
+* Satty _( Editing screenshots )_
+* SDDM _( Session manager )_ A modified theme of this [one](https://www.gnome-look.org/p/1673443).
+
