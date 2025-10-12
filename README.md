@@ -9,7 +9,7 @@ cd hyprland/
 >
 After the script ends, reboot your system to apply all the changes
 
-To change the icons press `MOD + R` to open rofi and the browse GTK Settings, or in terminal type `nwg-look` 
+To change the icons press `MOD + R` to open wofi and browse GTK Settings, or in terminal type `nwg-look` 
 
 ## Features
 * Alacritty _( Terminal )_
