@@ -1,5 +1,5 @@
 {
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
     "modules-center": ["clock"],
     "modules-right": ["hyprland/language","network","pulseaudio","upower", "custom/nots"],
 
@@ -19,11 +19,6 @@
   "on-click": "activate",
   "sort-by-number": true,
   "format": "{name}",
-  "format-icons": {
-      "urgent": "",
-      "active": "",
-      "default": ""
-    },
   "persistent-workspaces": {
       "*": 5
     },
@@ -37,6 +32,18 @@
     "on-click-right": "gsimplecal"
     
   },
+
+  "wlr/taskbar": {
+      "all-outputs": "false",
+      "format": "{icon}",
+      "icon-size": 20,
+      "tooltip-format": "{title}",
+      "on-click": "activate",
+      "on-click-right": "close",
+      "ignore-list": [
+         "Alacritty"
+      ]
+   },
 
 
     "network": {

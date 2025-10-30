@@ -3,18 +3,17 @@ background-color: alpha(black, 0.0);
 font-family: "JetBrains Mono", "Fira Code", monospace;
 }
 
-.modules-left {
-padding: 0px;
-margin-left: 0;
-border-radius:20px;
-background: alpha(black,.6);
-box-shadow: none;
-border: 3px solid #669466;
-
-}
+/* .modules-left { */
+/* padding: 0px; */
+/* margin-left: 0; */
+/* border-radius:20px; */
+/* background: alpha(black,.6); */
+/* box-shadow: none; */
+/* border: 3px solid #669466; */
+/* } */
 
 .modules-right {
-margin-right: 0px;
+margin-right: 5px;
 margin-left: 0px;
 border-radius: 20px;
 background: alpha(black,.6);
@@ -29,6 +28,14 @@ background: alpha(black,.6);
 box-shadow: none;
 border: 3px solid #669466;
 color: white
+}
+
+#workspaces {
+margin-left: 5px;
+border-radius:20px;
+background: alpha(black,.6);
+box-shadow: none;
+border: 3px solid #669466;
 }
 
 #workspaces button {
@@ -134,4 +141,40 @@ background-color: #ffffff;
 
 tooltip label {
 color: black;
+}
+
+#taskbar {
+padding: 0px;
+margin-left: 10px;
+border-radius:20px;
+background: alpha(black,.6);
+box-shadow: none;
+border: 3px solid #669466;
+}
+
+
+#taskbar button {
+color: #ECEFF1;
+all: initial;
+padding-left: 8px;
+padding-right: 8px;
+font-size: 20;
+}
+
+#taskbar button:hover {
+border-radius: 20px;
+background-color: alpha(rgb(255, 255, 255),0.2);
+}
+#taskbar button.active {
+color: #A7C4A7;
+border-radius: 18px;
+border: 3px solid rgba(102, 148, 102, 0.5);
+background: rgba(0, 0, 0, 0);
+}
+
+#taskbar button.urgent {
+color: #f37227;
+border-radius: 18px;
+border: 3px solid #f37227;
+background: #000000;
 }
