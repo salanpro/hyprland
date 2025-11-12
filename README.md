@@ -20,5 +20,5 @@ To change the icons press `MOD + R` to open wofi and browse GTK Settings, or in 
 * Hypridle _( IDLE management )_
 * Hyprshot _( Screenshots )_
 * Satty _( Editing screenshots )_
-* SDDM _( Session manager )_ A modified theme of this [one](https://www.gnome-look.org/p/1673443).
+* tuigreet _(Graphical console greeter)_
 
