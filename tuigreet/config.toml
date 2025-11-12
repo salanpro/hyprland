@@ -1,0 +1,7 @@
+[terminal]
+vt = 1
+
+[default_session]
+command = "tuigreet --theme 'border=lightgreen;text=gray;prompt=lightgreen;time=lightgreen;action=gray;button=darkgray;container=black;input=white' --greeting 'Welcome to Arch Linux' --time --remember --remember-session --asterisks --cmd Hyprland"
+user = "greeter"
+
