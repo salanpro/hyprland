@@ -26,10 +26,9 @@
     "on-scroll-down": "hyprctl dispatch workspace e-1"
 },
   "clock": {
-    "format": "{:%H:%M}",
-    "format-alt": "{:%d %B %Y}",
+    "format": "󱑂 {:%H:%M -  %d %B %Y}",
     "tooltip": false,
-    "on-click-right": "gsimplecal"
+    "on-click": "gnome-calendar"
     
   },
 
@@ -48,8 +47,8 @@
 
     "network": {
         "format-wifi": "󰖩",
-        "format-ethernet": "  Ethernet",
-        "format-linked": " Linked (No IP)",
+        "format-ethernet": "  ",
+        "format-linked": " (No IP)",
         "format-disconnected": "",
         "format-disabled": "󰖪",
         "tooltip": true,
