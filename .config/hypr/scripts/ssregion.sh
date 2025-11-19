@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-pkill slurp || hyprshot -m region --raw \
+pkill slurp || hyprshot -m region -z --raw \
 | satty --filename - \
 --output-filename ~/Pictures/Screenshots/Screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png \
 --early-exit \
