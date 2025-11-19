@@ -1,9 +1,9 @@
 echo "[+] Updating system and installing base packages..."
 sudo pacman -Syu
-sudo pacman -S showtime gst-libav libmpeg2 xdg-desktop-portal-hyprland pavucontrol gsimplecal wireplumber pipewire-jack pipewire-pulse alsa-firmware alsa-utils \
+sudo pacman -S showtime gst-libav libmpeg2 xdg-desktop-portal-hyprland pavucontrol wireplumber pipewire-jack pipewire-pulse alsa-firmware alsa-utils \
 nautilus alacritty base-devel brightnessctl fastfetch swaync firefox gnome-text-editor hyprland waybar wofi hyprlock hypridle bluez blueman hyprshot \
 loupe hyprpaper numlockx vulkan-radeon mesa tlp tlp-rdw nwg-look ttf-fira-code noto-fonts ttf-jetbrains-mono ttf-jetbrains-mono-nerd satty showtime \ 
-greetd-tuigreet fzf cliphist wl-clipboard
+greetd-tuigreet fzf cliphist wl-clipboard xdg-desktop-portal-gtk decibels
 
 echo "[+] Enabling services..."
 sudo systemctl enable greetd.service
