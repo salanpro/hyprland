@@ -2,7 +2,6 @@
 
 pkill slurp || hyprshot -m region -z --raw \
 | satty --filename - \
---output-filename ~/Pictures/Screenshots/Screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png \
---early-exit \
+--output-filename ~/Pictures/Screenshots/Screenshot__$(date +'%d-%m-%Y__%H-%M-%S').png \
 --copy-command 'wl-copy' \
 --disable-notifications
