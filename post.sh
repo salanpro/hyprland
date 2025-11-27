@@ -37,8 +37,12 @@ cd build/
 sudo ninja install
 
 
-echo "Making desktop apps"
+echo "Copying apps.desktop"
 cp vicinae/apps/* ~/.local/share/applications/
+
+echo "Copying scripts"
+cp vicinae/scripts/* ~/.config/hypr/scripts/
+
 
 echo "Copying theme"
 sudo cp vicinae/themes/* /usr/local/share/vicinae/themes/
