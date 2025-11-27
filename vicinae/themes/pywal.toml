@@ -1,0 +1,27 @@
+# Pywal - Generated from wallpaper
+[meta]
+version = 1
+name = "Pywal"
+description = "Dynamic theme generated from wallpaper"
+variant = "dark"
+
+[colors.core]
+background = "#2b2b2b"        # color0
+foreground = "#b6b4c7"        # color7
+secondary_background = "#536A53"  # color1
+border = "#61745D"            # color2
+accent = "#65855F"            # color4
+
+[colors.accents]
+blue = "#65855F"              # color4
+green = "#6D8E6A"             # color5
+magenta = "#889778"           # color6
+orange = "#667966"            # color3
+purple = "#889778"            # color6
+red = "#536A53"               # color1
+yellow = "#61745D"            # color2
+cyan = "#65855F"              # color4
+
+[colors.list.item.selection]
+background = { name = "#536A53", opacity = 0.7 }  # color1
+secondary_background = "#61745D"  # color2

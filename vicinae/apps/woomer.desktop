@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Woomer
+Comment=Zoom application for wayland
+Exec=bash -c "~/scriptsdesktop/woomer.sh"
+Icon=zoom
+Terminal=false
+Type=Utility

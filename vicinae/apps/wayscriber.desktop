@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Wayscriber
+Comment=Live drawing annotating
+Exec=wayscriber --active
+Icon=text-editor
+Terminal=false
+Type=Utility
