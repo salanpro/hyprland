@@ -1,0 +1,9 @@
+
+function blerc/vim-mode-hook {
+   bleopt keymap_vi_mode_string_nmap=$'\e[1;95m-- NORMAL --\e[m'
+   ble-bind -m vi_nmap --cursor 2    
+   ble-bind -m vi_imap --cursor 5 
+   ble-bind -m vi_imap -f 'C-c' discard-line
+   ble-bind -m vi_nmap -f 'C-c' discard-line
+}
+blehook/eval-after-load keymap_vi blerc/vim-mode-hook
