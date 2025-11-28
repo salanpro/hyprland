@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Woomer
-Comment=Zoom application for wayland
-Exec=bash -c "~/.config/hypr/scripts/woomer.sh"
-Icon=zoom
-Terminal=false
-Type=Utility
