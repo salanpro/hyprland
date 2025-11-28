@@ -13,6 +13,12 @@ alias grep='grep --color=auto'
 PS1='\[\e[1;37m\]\u\[\e[0m\]@\[\e[1;38;2;102;148;102m\]\h \[\e[1;33m\]\W\[\e[0m\]\$ '
 
 
+HISTSIZE=50000
+HISTFILESIZE=100000
+HISTTIMEFORMAT="%F %T "
+shopt -s histappend
+PROMPT_COMMAND='history -a'
+
 source ~/.local/share/blesh/ble.sh
 source $HOME/miniconda3/etc/profile.d/conda.sh
 . "$HOME/.cargo/env"
