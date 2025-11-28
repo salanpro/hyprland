@@ -13,7 +13,7 @@ To change the icons press `MOD + R` to open wofi and browse GTK Settings, or in 
 
 ## Features
 * Alacritty _( Terminal )_
-* Wofi _( App Launcher )_
+* Vicinae _( App Launcher )_
 * Waybar _( Bar )_
 * Swaync _( Panel and notifications )_
 * Hyprlock _( Screen lock )_
