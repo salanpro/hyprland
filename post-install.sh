@@ -41,7 +41,7 @@ sudo ninja install
 
 cd ~/Downloads/gitclones/
 git clone https://github.com/devmobasa/wayscriber.git
-cd wayscriber
+cd ~/Downloads/gitclones/wayscriber
 cargo build --release
 sudo cp target/release/wayscriber /usr/local/bin/
 
