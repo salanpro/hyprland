@@ -80,8 +80,8 @@
                     "command": "systemctl reboot"
                 },
                 {
-                    "label": "󱚌",
-                    "command": "alacritty -e flatpak run --command=io.github.alainm23.planify.quick-add io.github.alainm23.planify"
+                    "label": " ",
+                    "command": "notify-send hola"
                 },
                 {
                     "label": "",
