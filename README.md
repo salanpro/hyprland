@@ -3,7 +3,8 @@ Clone this repository and run the script
 ```bash
 git clone https://github.com/sergioalanpro/hyprland
 cd hyprland/
-./setup.sh 
+./setup.sh
+./post-install.sh
 ```
 >It should be executable, if not then `chmod +x setup.sh`
 >
