@@ -72,7 +72,6 @@
 
     "upower": {
      "icon-size": 24,
-     "hide-if-empty": true,
      "tooltip": false,
 },
 

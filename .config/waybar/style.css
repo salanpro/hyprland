@@ -1,6 +1,7 @@
 * {
 background-color: alpha(black, 0.0);
 font-family: "JetBrains Mono", "Fira Code", monospace;
+font-size: 21;
 }
 
 /* .modules-left { */
@@ -43,7 +44,6 @@ color: #ECEFF1;
 all: initial;
 padding-left: 8px;
 padding-right: 8px;
-font-size: 20;
 }
 
 #workspaces button:hover {
@@ -70,68 +70,50 @@ background: #000000;
 
 #network{
 color: #ECEFF1;
-margin-left: -1px;
-margin-right: 9px;
-font-size: 20px;
-}
-#clock{
-font-size: 20px;
+margin-right: 20px;
 }
 
 #network.disabled{
 color: #ECEFF1;
-margin-left: -1px;
-margin-right: 9px;
-font-size: 20px;
+margin-right: 20px;
 }
 
 #network.disconected{
 color: #ECEFF1;
-margin-left: 0px;
-margin-right: 5px;
-font-size: 20px;
+margin-right: 20px;
 }
 
 #network.linked{
 color: #ECEFF1;
-margin-left: 0px;
-margin-right: 5px;
-font-size: 20px;
-
+margin-right: 20px;
 }
 
 #language {
 margin-left: 5px;
-margin-right: 5px;
+margin-right: 12px;
 color: white;
-font-size: 20px;
 }
 
 #upower {
 color: white;
-margin-left: 0px;
-margin-right: 5px;
-font-size: 18px;
+margin-right: 12px;
 }
 
 
 #pulseaudio {
 color: #ffffff;
-margin-left: 3px;
-margin-right: 0px;
-font-size: 18px;
+margin-right: 12px;
 }
 
 #pulseaudio.muted {
 color: #ffffff;
-font-size: 18px;
 }
 
 #custom-nots {
 margin-left: 5px;
 margin-right: 12px;
 color: white;    
-font-size: 25px;
+font-size: 24px;
 }
 
 tooltip {
@@ -158,7 +140,6 @@ color: #ECEFF1;
 all: initial;
 padding-left: 8px;
 padding-right: 8px;
-font-size: 20;
 }
 
 #taskbar button:hover {
