@@ -11,6 +11,8 @@ cd hyprland/
 After the script ends, reboot your system to apply all the changes
 
 To change the icons press `MOD + R` to open wofi and browse GTK Settings, or in terminal type `nwg-look` 
+>I think it's no longer needed bc of gtk the folders added in .config, not tested yet
+>
 
 ## Features
 * Alacritty _( Terminal )_
