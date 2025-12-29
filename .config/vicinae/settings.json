@@ -37,17 +37,39 @@
    "providers": {
       "@gebeto/store.raycast.translate": {
          "enabled": false,
+         "preferences": {
+            "lang1": "es"
+         },
          "entrypoints": {
+            "instant-translate-copy": {
+               "enabled": false
+            },
+            "instant-translate-paste": {
+               "enabled": false
+            },
+            "instant-translate-view": {
+               "enabled": false
+            },
             "quick-translate": {
                "enabled": true
             },
             "translate": {
-               "enabled": true
+               "enabled": false
+            },
+            "translate-form": {
+               "enabled": false
             }
          }
       },
       "clipboard": {
-         "enabled": false
+         "enabled": false,
+         "entrypoints": {
+            "history": {
+               "preferences": {
+                  "defaultAction": "copy"
+               }
+            }
+         }
       },
       "core": {
          "enabled": false,
@@ -76,7 +98,12 @@
          "enabled": false
       },
       "wm": {
-         "enabled": false
+         "enabled": false,
+         "entrypoints": {
+            "switch-windows": {
+               "enabled": false
+            }
+         }
       }
    }
 }
