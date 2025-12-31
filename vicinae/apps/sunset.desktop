@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Hyprsunset
+Comment=Blue light filter
+Exec=bash -c "~/.config/hypr/scripts/sunset.sh"
+Icon=color
+Terminal=false
+Type=Utility
