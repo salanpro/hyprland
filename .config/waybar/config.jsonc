@@ -1,7 +1,34 @@
 {
-    "modules-left": ["hyprland/workspaces", "wlr/taskbar"],
+
+
+"modules-left": ["hyprland/workspaces", "wlr/taskbar", "mpris"],
     "modules-center": ["clock"],
-    "modules-right": ["hyprland/language","network","pulseaudio","upower", "custom/nots"],
+    "modules-right": ["hyprland/language","network","pulseaudio","cpu","memory","upower", "custom/nots"],
+
+    "memory": {
+    "interval": 10,
+    "format": " {percentage}%",
+    "max-length": 10
+},
+    "cpu": {
+    "interval": 10,
+    "format": " {usage}%",
+    "max-length": 10
+},
+    "mpris": {
+	"format": "{player_icon} {dynamic}",
+	"format-paused": "{status_icon} <i>{dynamic}</i>",
+  "dynamic-len": 25,
+  "dynamic-order": ["title", "artist", "album"],
+	"player-icons": {
+		"default": "▶",
+		"mpv": "🎵"
+	},
+	"status-icons": {
+		"paused": "⏸"
+	},
+	"ignored-players": ["firefox"]
+},
 
     "custom/nots": {
         "format": "󱨩",
