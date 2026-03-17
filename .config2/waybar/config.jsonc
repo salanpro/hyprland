@@ -1,7 +1,7 @@
 {
 
 
-"modules-left": ["hyprland/workspaces", "wlr/taskbar", "mpris"],
+"modules-left": ["hyprland/workspaces", "wlr/taskbar"],
     "modules-center": ["clock"],
     "modules-right": ["hyprland/language","network","pulseaudio","cpu","memory","upower", "custom/nots"],
 
