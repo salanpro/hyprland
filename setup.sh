@@ -1,9 +1,35 @@
+echo "[?] Select config"
+select OPTION in "Config 1" "Config 2" "Exit"; do
+    case $OPTION in
+        "Config 1")
+            CONFIG_DIR=".config"
+            ICONS_DIR=".icons"
+            WALLPAPER_DIR='wallpaper'
+            break
+            ;;
+        "Config 2")
+            CONFIG_DIR=".config2"
+            ICONS_DIR=".icons2"
+            WALLPAPER_DIR='wallpaper2'
+            break
+            ;;
+        "Exit")
+            echo "Exit..."
+            exit 0
+            ;;
+        *)
+            echo "Invalid option, try again"
+            ;;
+    esac
+done
+
+
 echo "[+] Updating system and installing base packages..."
 sudo pacman -Syu
 sudo pacman -S showtime gst-libav libmpeg2 xdg-desktop-portal-hyprland pavucontrol wireplumber pipewire-jack pipewire-pulse alsa-firmware alsa-utils \
 nautilus alacritty base-devel brightnessctl fastfetch swaync firefox hyprland waybar hyprlock hypridle bluez blueman hyprshot \
 loupe hyprpaper numlockx vulkan-radeon mesa tlp tlp-rdw nwg-look ttf-fira-code noto-fonts ttf-jetbrains-mono ttf-jetbrains-mono-nerd satty showtime \
-greetd-tuigreet fzf wl-clipboard xdg-desktop-portal-gtk decibels nvim gnome-calendar hyprpicker noto-fonts-emoji papers hyprsunset syntax-highlighting
+greetd-tuigreet fzf wl-clipboard xdg-desktop-portal-gtk decibels nvim gnome-calendar hyprpicker noto-fonts-emoji papers hyprsunset syntax-highlighting rsync
 echo "[+] Enabling services..."
 sudo systemctl enable greetd.service
 sudo systemctl enable tlp.service
@@ -14,18 +40,18 @@ systemctl --user enable wireplumber.service
 
 echo "[+] Copying to .icons..."
 mkdir -p ~/.icons
-cp -r .icons/* ~/.icons/
+cp -r $ICONS_DIR/* ~/.icons/
 
 echo "[+] Copying to .config..."
 mkdir -p ~/.config
-cp -r .config/* ~/.config/
+cp -r $CONFIG_DIR/* ~/.config/
 
 echo "[+] Setting tuigreet..."
 sudo cp tuigreet/config.toml /etc/greetd/
 
 echo "[+] Copying wallpaper..."
 mkdir -p ~/Pictures/wallpaper/
-cp wallpaper/* ~/Pictures/wallpaper
+cp $WALLPAPER_DIR/* ~/Pictures/wallpaper
 
 echo "[+] Copying .bashrc..."
 cp -f .bashrc ~/.bashrc
