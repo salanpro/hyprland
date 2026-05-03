@@ -23,6 +23,8 @@ sudo pacman -Syu			\
     libqalculate 	\
     minizip			\
     qtkeychain-qt6	\
+    qt6-declarative \
+    syntax-highlighting \
     rapidfuzz-cpp \
     ccache \
     mold
