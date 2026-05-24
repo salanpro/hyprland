@@ -8,38 +8,15 @@ cp vicinae/apps/* ~/.local/share/applications/
 echo "Copying scripts"
 cp vicinae/scripts/* ~/.config/hypr/scripts/
 
-echo "Installing dependencies for vicinae"
-sudo pacman -Syu			\
-    base-devel 		\
-    cmake			\
-    ninja			\
-    nodejs			\
-    npm				\
-    qt6-base		\
-    qt6-svg			\
-    protobuf		\
-    cmark-gfm		\
-    layer-shell-qt 	\
-    libqalculate 	\
-    minizip			\
-    qtkeychain-qt6	\
-    qt6-declarative \
-    syntax-highlighting \
-    rapidfuzz-cpp \
-    ccache \
-    mold
 
-echo "Cloning vicinae"
+sudo pacman -S --needed base-devel
 cd ~/Downloads/gitclones/
-git clone https://github.com/vicinaehq/vicinae.git && cd vicinae
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
 
-echo "Making build"
-make host-optimized
-
-cd build/
-sudo ninja install
-
-
+paru vicinae-git
+paru wlogout
 
 cd ~/Downloads/gitclones/
 git clone https://github.com/devmobasa/wayscriber.git
