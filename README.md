@@ -1,7 +1,7 @@
 ## Get started
 Clone this repository and run the script
 ```bash
-git clone https://github.com/sergioalanpro/hyprland
+git clone https://github.com/salanpro/hyprland
 cd hyprland/
 ./setup.sh
 ./post-install.sh
@@ -10,7 +10,7 @@ cd hyprland/
 >
 After the script ends, reboot your system to apply all the changes
 
-To change the icons press `MOD + R` to open wofi and browse GTK Settings, or in terminal type `nwg-look` 
+To change the icons press `MOD + R` to open vicinae launcher and browse GTK Settings, or in terminal type `GTK Settings` 
 >I think it's no longer needed bc of gtk the folders added in .config, not tested yet
 >
 
