@@ -1,71 +1,63 @@
 * {
-background-color: alpha(black, 0.0);
-font-family: "JetBrains Mono", "Fira Code", monospace;
-font-size: 21;
+font-family: "Adwaita Sans", monospace;
+/* font-family: "JetBrains Mono", "Fira Code", monospace; */
+font-size: 20;
+border: none;
+border-radius: 0;
 }
-
-/* .modules-left { */
-/* padding: 0px; */
-/* margin-left: 0; */
-/* border-radius:20px; */
-/* background: alpha(black,.6); */
-/* box-shadow: none; */
-/* border: 3px solid #669466; */
-/* } */
+window#waybar {
+    background-color: alpha(black, .9);  
+}
 
 .modules-right {
 margin-right: 5px;
 margin-left: 0px;
-border-radius: 20px;
-background: alpha(black,.6);
 box-shadow: none;
-border: 3px solid #669466;
 }
 
 .modules-center {
-padding:5px;
-border-radius:20px;
-background: alpha(black,.6);
 box-shadow: none;
-border: 3px solid #669466;
 color: white
 }
 
 #workspaces {
 margin-left: 5px;
-border-radius:20px;
-background: alpha(black,.6);
 box-shadow: none;
-border: 3px solid #669466;
 }
 
 #workspaces button {
 color: #ECEFF1;
 all: initial;
-padding-left: 8px;
-padding-right: 8px;
+padding-left: 10px;
+padding-right: 10px;
 }
 
 #workspaces button:hover {
-border-bottom: 1px solid alpha(rgb(255, 255, 255),0.6);
-border-radius: 20px;
-background-color: alpha(rgb(255, 255, 255),0.8);
+background: alpha(rgb(255, 255, 255),0.8);
+color: #000000;
 }
 
 #workspaces button.active {
-color: #669466;
-border-radius: 18px;
-border: 3px solid #669466;
+color: #FFFFFF;
 background: #000000;
-
+border: 3px solid #FFFFFF;
+/* transition:0.2s ease-out; */
 }
 
 #workspaces button.urgent {
-color: #f37227;
-border-radius: 18px;
-border: 3px solid #f37227;
+color: #FF6A00;
 background: #000000;
+border: 3px solid #FF6A00;
 
+}
+
+#cpu{
+color: #ECEFF1;
+margin-right: 15px;
+}
+#memory{
+color: #ECEFF1;
+margin-right: 20px;
 }
 
 #network{
@@ -95,6 +87,7 @@ color: white;
 }
 
 #upower {
+margin-left: -12px;
 color: white;
 margin-right: 12px;
 }
@@ -117,45 +110,50 @@ font-size: 24px;
 }
 
 tooltip {
-border-radius: 4px;
 background-color: #ffffff; 
 }
 
 tooltip label {
 color: black;
+font-size: 18;
 }
+
+#mpris {
+padding: 5px;
+margin-left: 25px;
+box-shadow: none;
+}
+
 
 #taskbar {
 padding: 0px;
-margin-left: 10px;
-border-radius:20px;
-background: alpha(black,.6);
+margin-left: 15px;
 box-shadow: none;
-border: 3px solid #669466;
 }
 
 
 #taskbar button {
-color: #ECEFF1;
+/* color: #ECEFF1; */
 all: initial;
 padding-left: 8px;
 padding-right: 8px;
 }
 
 #taskbar button:hover {
+background: alpha(rgb(255, 255, 255),0.5);
+border: 1px solid alpha(black, .9);
 border-radius: 20px;
-background-color: alpha(rgb(255, 255, 255),0.2);
+
 }
 #taskbar button.active {
-color: #A7C4A7;
-border-radius: 18px;
-border: 3px solid rgba(102, 148, 102, 0.5);
-background: rgba(0, 0, 0, 0);
+background: alpha(rgb(255, 255, 255),0.5);
+border: 1px solid alpha(black, .9); 
+border-radius: 20px;
+
 }
 
 #taskbar button.urgent {
-color: #f37227;
-border-radius: 18px;
-border: 3px solid #f37227;
-background: #000000;
+background: alpha(rgb(255, 106, 0),0.5);
+border: 1px solid alpha(black, .9);  
+border-radius: 20px;
 }

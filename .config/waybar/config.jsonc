@@ -1,18 +1,18 @@
 {
 
 
-"modules-left": ["hyprland/workspaces", "wlr/taskbar", "mpris"],
+"modules-left": ["hyprland/workspaces", "wlr/taskbar"],
     "modules-center": ["clock"],
     "modules-right": ["hyprland/language","network","pulseaudio","cpu","memory","upower", "custom/nots"],
 
     "memory": {
     "interval": 10,
-    "format": " {percentage}%",
+    "format": "   {percentage}%",
     "max-length": 10
 },
     "cpu": {
     "interval": 10,
-    "format": " {usage}%",
+    "format": "  {usage}%",
     "max-length": 10
 },
     "mpris": {
@@ -27,7 +27,7 @@
 	"status-icons": {
 		"paused": "⏸"
 	},
-	"ignored-players": ["firefox"]
+	"ignored-players": ["firefox", "chromium", "Chromium"]
 },
 
     "custom/nots": {
@@ -53,7 +53,7 @@
     "on-scroll-down": "hyprctl dispatch workspace e-1"
 },
   "clock": {
-    "format": "󱑂 {:%H:%M -  %d %B %Y}",
+    "format": "󱑂  {:%H:%M -   %d %B %Y}",
     "tooltip": false,
     "on-click": "gnome-calendar"
     
@@ -85,14 +85,14 @@
 
     "pulseaudio": {
         "format": "{icon}{volume}%",
-        "format-muted": " {volume}%",
+        "format-muted": "  {volume}%",
         "format-bluetooth": " {volume}%",
         "format-bluetooth-muted": "  {volume}%",
         "tooltip": false,
         "format-icons": {
-            "headphone": " ",
-            "headset": " ",
-            "default": [" "],
+            "headphone": "  ",
+            "headset": "  ",
+            "default": ["   "],
         },
         "on-click": "pavucontrol",
     },

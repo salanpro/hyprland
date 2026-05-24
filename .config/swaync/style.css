@@ -1,23 +1,26 @@
 
 * {
-    font-family: "JetBrains Mono", "Fira Code", monospace;
-    font-size: 24px;
+    font-family: "Adwaita Sans", monospace;
+    /* font-family: "JetBrains Mono", "Fira Code", monospace; */
+    font-size: 21px;
 }
 
 .control-center {
-    border: 4px solid #669466;
-    margin-top: 7px;
-    margin-bottom: 11px;
-    margin-right: -2px;
+    border: 1px solid #7C7E7C;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    margin-right: -10px;
     background: #2b2b2bf5;
+
 
 }
 
 button {
+
     border: 0px;
     min-width: 60px;
     min-height: 40px;
-    background: #669466;
+    background: #7C7E7C;
     color: #eceff4;
 
 }
@@ -31,14 +34,14 @@ button:hover {
     font-size: 12px;
 }
 .notification progressbar progress {
-    background-color: #669466;
+    background-color: #7C7E7C;
 }
 
 .notification progressbar trough {
     background-color: #4c566a;
 }
 .notification {
-    border: 3px solid #669466;
+    border: 3px solid #7C7E7C;
     border-radius: 15px;
     margin-right: 0px;
     margin-top: 9px;
@@ -53,11 +56,11 @@ button:hover {
 
 
 .widget-dnd switch:checked {
-    background: #669466;
+    background: #7C7E7C;
 }
 
 .close-button {
-    background: #669466;
+    background: #7C7E7C;
     text-shadow: none;
     padding: 0;
     border-radius: 15px;
@@ -94,7 +97,7 @@ button:hover {
 
 .widget-volume scale highlight {
     border-radius: 3px;
-    background: #669466;
+    background: #7C7E7C;
 }
 
 .widget-volume scale slider {
@@ -102,7 +105,7 @@ button:hover {
     min-height: 17px;
     border-radius: 100%;
     background: #eceff4;
-    border: 2px solid #669466;
+    border: 2px solid #7C7E7C;
 }
 
 
@@ -126,7 +129,7 @@ button:hover {
 
 .widget-backlight scale highlight {
     border-radius: 3px;
-    background: #669466;
+    background: #7C7E7C;
 }
 
 .widget-backlight scale slider {
@@ -134,7 +137,7 @@ button:hover {
     min-height: 17px; /*ancho circulo*/
     border-radius: 100%;
     background: #eceff4;
-    border: 2px solid #669466;
+    border: 2px solid #7C7E7C;
 }
 
 .widget-mpris {
@@ -149,7 +152,7 @@ min-width: 45px;
 }
 
 .widget-mpris-player {
-    border: 2px solid #669466;
+    border: 2px solid #7C7E7C;
     border-radius: 10px;
     background: #2e3440;
     color: #eceff4;

@@ -9,20 +9,24 @@
 // Learn more about configuration at https://docs.vicinae.com/config
 
 {
+   "$schema": "https://vicinae.com/schemas/config.json",
    "font": {
       "normal": {
-         "family": "JetBrainsMono Nerd Font",
+         "family": "Adwaita Sans",
          "size": 16
       }
    },
    "theme": {
       "dark": {
-         "name": "pywal",
+         "name": "vicinae-dark",
          "icon_theme": "PapirusG"
       }
    },
    "launcher_window": {
-      "opacity": 0.95
+      "opacity": 0.95,
+      "client_side_decorations": {
+         "enabled": false
+      }
    },
    "favorites": [
       "applications:anydo",
@@ -36,7 +40,7 @@
    ],
    "providers": {
       "@gebeto/store.raycast.translate": {
-         "enabled": false,
+         "enabled": true,
          "preferences": {
             "lang1": "es"
          },
@@ -54,11 +58,21 @@
                "enabled": true
             },
             "translate": {
-               "enabled": false
+               "enabled": true
             },
             "translate-form": {
                "enabled": false
             }
+         }
+      },
+      "applications": {
+         "preferences": {
+            "paths": [
+               "/home/salan/.local/share/applications",
+               "/home/salan/.local/share/flatpak/exports/share/applications",
+               "/usr/local/share/applications",
+               "/usr/share/applications"
+            ]
          }
       },
       "clipboard": {
@@ -66,16 +80,19 @@
          "entrypoints": {
             "history": {
                "preferences": {
-                  "defaultAction": "copy"
+                  "defaultAction": "paste"
                }
             }
          }
       },
       "core": {
-         "enabled": false,
+         "enabled": true,
          "entrypoints": {
+            "inspect-local-storage": {
+               "enabled": true
+            },
             "store": {
-               "enabled": false
+               "enabled": true
             }
          }
       },
@@ -92,7 +109,7 @@
          "enabled": false
       },
       "raycast-compat": {
-         "enabled": false
+         "enabled": true
       },
       "system": {
          "enabled": false
