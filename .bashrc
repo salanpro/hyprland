@@ -37,3 +37,5 @@ export BUN_INSTALL="$HOME/.local/share/reflex/bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export SCCACHE_CACHE_SIZE="30G"
+
+eval "$(fzf --bash)"
