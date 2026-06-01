@@ -52,6 +52,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("hypridle")
   hl.exec_cmd("vicinae server")
   hl.exec_cmd("hyprsunset")
+  hl.exec_cmd("qs -c overview")
 end)
 
 
@@ -328,8 +329,12 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"), { locked = f
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"), { locked = false, repeating = false })
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("wlogout"), { locked = false, repeating = false })
 
+
+hl.bind("ALT + TAB", hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"), { locked = false, repeating = false })
+
+
 --SHOW TAB WINDOWS
-hl.bind("ALT + TAB", hl.dsp.exec_cmd(" vicinae vicinae://launch/wm/switch-windows "), { locked = false, repeating = false })
+hl.bind("SHIFT + TAB", hl.dsp.exec_cmd(" vicinae vicinae://launch/wm/switch-windows "), { locked = false, repeating = false })
 
 -- SHOW EMOJIS
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("vicinae vicinae://launch/core/search-emojis"), { locked = false, repeating = false })

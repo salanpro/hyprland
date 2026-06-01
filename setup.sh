@@ -25,7 +25,7 @@ sudo pacman -S playerctl showtime gst-libav libmpeg2 xdg-desktop-portal-hyprland
 nautilus alacritty base-devel brightnessctl fastfetch swaync firefox hyprland waybar hyprlock hypridle bluez blueman hyprshot \
 loupe hyprpaper numlockx vulkan-radeon mesa tlp tlp-rdw nwg-look ttf-fira-code noto-fonts ttf-jetbrains-mono ttf-jetbrains-mono-nerd satty showtime \
 greetd-tuigreet fzf wl-clipboard xdg-desktop-portal-gtk decibels neovim gnome-calendar hyprpicker noto-fonts-emoji papers hyprsunset syntax-highlighting rsync neovide \
-qt6-shadertools
+qt6-shadertools quickshell
 
 echo "[+] Enabling services..."
 sudo systemctl enable greetd.service

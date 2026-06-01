@@ -17,6 +17,7 @@ makepkg -si
 
 paru vicinae-git
 paru wlogout
+paru quickshell-overview-git
 
 cd ~/Downloads/gitclones/
 git clone https://github.com/devmobasa/wayscriber.git
