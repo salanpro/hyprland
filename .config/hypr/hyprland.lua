@@ -307,7 +307,7 @@ hl.bind(mainMod .. "+ PRINT", hl.dsp.exec_cmd("hyprshot -m window -m eDP-1 -z -s
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output -m eDP-1 -z -s -f Screenshot__$(date +'%d-%m-%Y__%H-%M-%S').png -o ~/Pictures/Screenshots "), { locked = false, repeating = false })
 
 --SCREENSHOTS HYPRSHOT + SATTY
-hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("~/.config/hypr/scripts/ssregion.sh"), { locked = false, repeating = false })
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("~/.config/hypr/scripts/ssdmenusatty.sh"), { locked = false, repeating = false })
 -- hl.bind(mainMod .. "+ PRINT", hl.dsp.exec_cmd("~/.config/hypr/scripts/sswindow.sh"), { locked = false, repeating = false })
 -- hl.bind("PRINT", hl.dsp.exec_cmd("~/.config/hypr/scripts/ssfullscreen.sh"), { locked = false, repeating = false })
 
