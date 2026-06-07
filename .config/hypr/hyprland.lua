@@ -1,6 +1,7 @@
 -- This is an example Hyprland Lua config file.
 -- Refer to the wiki for more information.
 -- https://wiki.hypr.land/Configuring/Start/
+--
 
 -- Please note not all available settings / options are set here.
 -- For a full list, see the wiki
@@ -33,7 +34,7 @@ local fileManager = "nautilus"
 local file2 = "vicinae vicinae://launch/files/search"
 local menu        = "vicinae toggle"
 local browser = "firefox"
-
+local winoverview ="qs ipc -c overview call overview toggle"
 
 -------------------
 ---- AUTOSTART ----
@@ -92,10 +93,10 @@ hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in  = 3,
+        gaps_in  = 0,
         gaps_out = 0,
 
-        border_size = 2,
+        border_size = 0,
 
         col = {
             active_border   = { colors = {"rgba(7E7C7EFF)"}},
@@ -254,13 +255,7 @@ hl.gesture({
     direction = "down",
     action = "close"
 })
---
--- hl.gesture({
---     fingers = 4,
---     direction = "up",
---     action = "menu"
--- })
---
+
 hl.gesture({
     fingers = 3,
     direction = "pinch",
@@ -268,6 +263,7 @@ hl.gesture({
 })
 
 hl.gesture({ fingers = 4, direction = "up", action = function() hl.exec_cmd(menu) end })
+hl.gesture({ fingers = 3, direction = "up", action = function() hl.exec_cmd(winoverview) end })
 
 -- hl.gesture({
 --   fingers = 4,
@@ -303,6 +299,7 @@ local clipboard = "vicinae vicinae://launch/clipboard/history"
 hl.bind(mainMod .. "+ V", hl.dsp.exec_cmd(clipboard), { locked = false, repeating = false })
 
 --SCREENSHOTS HYPRSHOT
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region -m eDP-1 -z -s -f Screenshot__$(date +'%d-%m-%Y__%H-%M-%S').png -o ~/Pictures/Screenshots"), { locked = false, repeating = false })
 hl.bind(mainMod .. "+ PRINT", hl.dsp.exec_cmd("hyprshot -m window -m eDP-1 -z -s -f Screenshot__$(date +'%d-%m-%Y__%H-%M-%S').png -o ~/Pictures/Screenshots"), { locked = false, repeating = false })
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output -m eDP-1 -z -s -f Screenshot__$(date +'%d-%m-%Y__%H-%M-%S').png -o ~/Pictures/Screenshots "), { locked = false, repeating = false })
 
@@ -330,11 +327,12 @@ hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"), { locked = false
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("wlogout"), { locked = false, repeating = false })
 
 
-hl.bind("ALT + TAB", hl.dsp.exec_cmd("qs ipc -c overview call overview toggle"), { locked = false, repeating = false })
+hl.bind("ALT + TAB", hl.dsp.exec_cmd(winoverview), { locked = false, repeating = false })
+
 
 
 --SHOW TAB WINDOWS
-hl.bind("SHIFT + TAB", hl.dsp.exec_cmd(" vicinae vicinae://launch/wm/switch-windows "), { locked = false, repeating = false })
+-- hl.bind("SHIFT + TAB", hl.dsp.exec_cmd(" vicinae vicinae://launch/wm/switch-windows "), { locked = false, repeating = false })
 
 -- SHOW EMOJIS
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("vicinae vicinae://launch/core/search-emojis"), { locked = false, repeating = false })
@@ -450,7 +448,7 @@ hl.window_rule({ match = { class = "org.gnome.Nautilus" },        opacity = "0.8
 hl.window_rule({ match = { class = "discord" },                   workspace = "5 silent" })
 hl.window_rule({ match = { class = "com.gabm.satty" },            size = { 1000, 700 }, center = true, float = true })
 hl.window_rule({ match = { class = "com.obsproject.Studio" },     workspace = "8", border_color = "rgba(ff0000ff)" })
-hl.window_rule({ match = { class = "org.gnome.Calendar" },        float = true, center = true, size = { 836, 612 }, move = { 527, 49 } })
+hl.window_rule({ match = { class = "org.gnome.Calendar" },        float = true, size = { 836, 612 }, move = { 527, 49 } })
 hl.window_rule({ match = { class = "org.gnome.Loupe" },           float = true, center = true })
 hl.window_rule({ match = { class = "org.gnome.Papers" },          float = true })
 hl.window_rule({ match = { class = "xdg-desktop-portal-gtk" },    float = true })
@@ -468,6 +466,14 @@ hl.window_rule({ match = { class = "Waydroid" },                  float = true, 
 -- })
 -- overlayLayerRule:set_enabled(false)
 
+
+hl.layer_rule({
+  match = { namespace = "vicinae" },
+  name = "vicinae-blur",
+  blur = true,
+  ignore_alpha = 0,
+})
+
 -- Hyprland-run windowrule
 hl.window_rule({
     name  = "move-hyprland-run",
@@ -477,9 +483,25 @@ hl.window_rule({
     float = true,
 })
 
+-- hl.layer_rule({
+--   match = { namespace = "vicinae" },
+--   name = "vicinae-no-animation",
+--   no_anim = true,
+-- })
+--
+--
 
 hl.config({
     input = {
         numlock_by_default = true,
     },
 })
+
+
+
+hl.config({
+  misc = {
+    focus_on_activate = true,
+  },
+})
+
