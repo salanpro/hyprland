@@ -1,0 +1,7 @@
+#!/bin/bash
+# @vicinae.schemaVersion 1
+# @vicinae.title audiotest
+# @vicinae.icon 📢
+# @vicinae.mode silent
+# @vicinae.exec ["/bin/bash"]
+speaker-test -t wav -c 2

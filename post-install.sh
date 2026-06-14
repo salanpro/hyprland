@@ -8,6 +8,9 @@ cp vicinae/apps/* ~/.local/share/applications/
 echo "Copying scripts"
 cp vicinae/scripts/* ~/.config/hypr/scripts/
 
+echo "Copying vicinae-scripts"
+mkdir -p ~/.local/share/vicinae/scripts/
+cp vicinae/vicinae-scripts/* ~/.local/share/vicinae/scripts/.
 
 sudo pacman -S --needed base-devel
 cd ~/Downloads/gitclones/
