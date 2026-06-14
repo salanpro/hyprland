@@ -32,10 +32,4 @@ source $HOME/miniconda3/etc/profile.d/conda.sh
 . "$HOME/.cargo/env"
 alias upa='flatpak update && sudo pacman -Syu'
 
-# bun
-export BUN_INSTALL="$HOME/.local/share/reflex/bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export SCCACHE_CACHE_SIZE="30G"
-
 eval "$(fzf --bash)"
