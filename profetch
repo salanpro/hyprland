@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+kernel_version=$(uname -sr)
+python_version=$(python --version | awk '{print $2}')
+cargo_version=$(cargo --version | awk '{print $2}')
+rustup_version=$(rustup --version 2>/dev/null | awk '{print $2}')
+go_version=$(go version | awk {'print $3'})
+
+echo "╔══════════════════════════════════════╗"
+echo "║             TOOLS INFO               ║"
+echo "╠══════════════════════════════════════╣"
+echo "║Kernel | $kernel_version               "
+echo "║Cargo  | $cargo_version                "
+echo "║Rustup | $rustup_version               "
+echo "║Go     | $go_version                   "
+echo "║Python | $python_version               "
+echo "╚══════════════════════════════════════╝"
+
