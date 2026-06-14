@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Kali Linux
+Comment=Kali Linux virtual machine
+Exec=bash -c "~/.config/hypr/scripts/kalilinux.sh"
+Icon=computer
+Terminal=false
+Type=Utility

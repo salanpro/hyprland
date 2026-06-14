@@ -1,9 +1,3 @@
-#!/bin/bash
-# @vicinae.schemaVersion 1
-# @vicinae.title Kali Linux
-# @vicinae.icon 🖥️
-# @vicinae.mode silent
-# @vicinae.exec ["/bin/bash"]
 qemu-system-x86_64 \
   -enable-kvm \
   -m 6G \
@@ -13,4 +7,3 @@ qemu-system-x86_64 \
   -net nic -net user,hostfwd=tcp::2222-:22 \
   -vga virtio \
   -display gtk,gl=on
-
