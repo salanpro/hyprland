@@ -1,7 +1,7 @@
 # Workaround for xdg-desktop-portal 1.22+ requiring graphical-session.target
 # which Hyprland (without uwsm) does not activate.
 # See: https://github.com/flatpak/xdg-desktop-portal/issues/1983
-
+# systemctl --user daemon-reload && systemctl --user start xdg-desktop-portal
 [Unit]
 Description=Portal service
 PartOf=graphical-session.target
