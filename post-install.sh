@@ -27,3 +27,9 @@ git clone https://github.com/devmobasa/wayscriber.git
 cd ~/Downloads/gitclones/wayscriber
 cargo build --release
 sudo cp target/release/wayscriber /usr/local/bin/
+
+
+#Add this lines in /etc/pam.d/greetd
+#
+#auth 	 optional     pam_gnome_keyring.so
+#session  optional     pam_gnome_keyring.so     auto_start

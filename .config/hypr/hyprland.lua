@@ -30,6 +30,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal    = "alacritty"
+local terminal2    = "kitty"
 local fileManager = "nautilus"
 local file2 = "vicinae vicinae://launch/files/search"
 local menu        = "vicinae toggle"
@@ -54,6 +55,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("vicinae server")
   hl.exec_cmd("hyprsunset")
   hl.exec_cmd("qs -c overview")
+  hl.exec_cmd("gnome-keyring-daemon --start --components=secrets")
 end)
 
 
@@ -172,7 +174,8 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 -- "Smart gaps" / "No gaps when only"
 -- uncomment all if you wish to use that.
 -- hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
--- hl.workspace_rule({ workspace = "f[1]",   gaps_out = 0, gaps_in = 0 })
+-- hl.workspace_rule({ workspace = "1",   gaps_out = 15, gaps_in = 5 })
+-- hl.workspace_rule({ workspace = "1", layout="scrolling" })
 -- hl.window_rule({
 --     name  = "no-gaps-wtv1",
 --     match = { float = false, workspace = "w[tv1]" },
@@ -205,6 +208,12 @@ hl.config({
 hl.config({
     scrolling = {
         fullscreen_on_one_column = true,
+        focus_fit_method = 1,
+        wrap_focus = true,
+        column_width = 0.8,
+        follow_min_visible = 0.0,
+        follow_focus = true,
+        -- direction = "down",
     },
 })
 
@@ -338,6 +347,7 @@ hl.bind("ALT + TAB", hl.dsp.exec_cmd(winoverview), { locked = false, repeating =
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("vicinae vicinae://launch/core/search-emojis"), { locked = false, repeating = false })
 
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(terminal2))
 local closeWindowBind = hl.bind(mainMod .. " + K", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(file2), { locked = false, repeating = false })
@@ -439,6 +449,7 @@ hl.window_rule({
 })
 
 -- Window Rules
+hl.window_rule({ match = { class = "brave-browser" },                   opacity = "1.0 override" })
 hl.window_rule({ match = { class = "firefox" },                   opacity = "1.0 override" })
 hl.window_rule({ match = { class = "Code" },                      opacity = "0.9 override" })
 hl.window_rule({ match = { class = "chromium" },                  opacity = "1.0 override" })
@@ -456,6 +467,7 @@ hl.window_rule({ match = { class = "org.gnome.Showtime" },        float = true, 
 hl.window_rule({ match = { class = "org.pulseaudio.pavucontrol" },float = true, size = { 862, 461 }, move = { 1048, 53 } })
 hl.window_rule({ match = { class = "blueman-manager" },           float = true, size = { 837, 531 }, center = true })
 hl.window_rule({ match = { class = "Waydroid" },                  float = true, size = { 576, 1024 }, center = true })
+hl.window_rule({ match = { class = "steam", initial_title = "Friends List" }, float = true, size = { 356, 777 }, move = {1543, 186}})
 -- hl.window_rule({ match = { class = "discord" },                   no_screen_share = true})
 
 -- Layer rules also return a handle.

@@ -73,7 +73,7 @@
                 },
                 {
                     "label": "󰂯",
-                    "command": "blueman-manager"
+                    "command": "hyprctl dispatch \"hl.dsp.exec_cmd('blueman-manager')\""
                 },
                 {
                     "label": "",
@@ -81,7 +81,7 @@
                 },
                 {
                     "label": " ",
-                    "command": "notify-send hola"
+                    "command": "~/.config/hypr/scripts/hypridle.sh"
                 },
                 {
                     "label": "",

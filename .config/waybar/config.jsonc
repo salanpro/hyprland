@@ -55,8 +55,7 @@
   "clock": {
     "format": "󱑂  {:%H:%M -   %d %B %Y}",
     "tooltip": false,
-    "on-click": "gnome-calendar"
-    
+        "on-click": "hyprctl dispatch \"hl.dsp.exec_cmd('gnome-calendar')\""
   },
 
   "wlr/taskbar": {
@@ -67,7 +66,9 @@
       "on-click": "activate",
       "on-click-right": "close",
       "ignore-list": [
-         "Alacritty"
+         "Alacritty",
+         "Kitty",
+         "kitty"
       ]
    },
 
@@ -80,7 +81,7 @@
         "format-disabled": "󰖪",
         "tooltip": true,
         "tooltip-format": "{essid} \n {ipaddr}",
-        "on-click": "alacritty -e nmtui",
+        "on-click": "hyprctl dispatch \"hl.dsp.exec_cmd('alacritty -e nmtui')\"",
     },
 
     "pulseaudio": {
@@ -94,7 +95,7 @@
             "headset": "  ",
             "default": ["   "],
         },
-        "on-click": "pavucontrol",
+        "on-click": "hyprctl dispatch \"hl.dsp.exec_cmd('pavucontrol')\"",
     },
 
     "upower": {
