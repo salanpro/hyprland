@@ -6,14 +6,17 @@
     "modules-right": ["hyprland/language","network","pulseaudio","cpu","memory","upower", "custom/nots"],
 
     "memory": {
-    "interval": 10,
-    "format": "   {percentage}%",
+    "interval": 8,
+    "format": "󰹫  {percentage}%",
+    //"format": "   {percentage}%",//
     "max-length": 10
 },
     "cpu": {
-    "interval": 10,
+    "interval": 8,
     "format": "  {usage}%",
-    "max-length": 10
+    "max-length": 10,
+    "on-click": "alacritty -o \"window.startup_mode='Fullscreen'\" --title btop -e btop"
+
 },
     "mpris": {
 	"format": "{player_icon} {dynamic}",
@@ -46,11 +49,12 @@
   "on-click": "activate",
   "sort-by-number": true,
   "format": "{name}",
+  "tooltip": false,
   "persistent-workspaces": {
       "*": 5
     },
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1"
+    "on-scroll-up": "hyprctl dispatch \"hl.dsp.focus({workspace='e+1'})\"",
+    "on-scroll-down": "hyprctl dispatch \"hl.dsp.focus({workspace='e-1'})\"",
 },
   "clock": {
     "format": "󱑂  {:%H:%M -   %d %B %Y}",
@@ -80,8 +84,7 @@
         "format-disconnected": "",
         "format-disabled": "󰖪",
         "tooltip": true,
-        "tooltip-format": "{essid} \n {ipaddr}",
-        "on-click": "hyprctl dispatch \"hl.dsp.exec_cmd('alacritty -e nmtui')\"",
+        "tooltip-format": "{essid} \n {ipaddr} \n {signalStrength}% \n {frequency}GHz",
     },
 
     "pulseaudio": {

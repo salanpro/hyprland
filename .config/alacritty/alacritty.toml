@@ -1,7 +1,7 @@
 
 [window]
 dimensions            = { columns = 88, lines = 25 }
-opacity               = 0.7
+opacity               = 0.6
 
 [font]
 normal = { family = "Adwaita mono", style = "Regular" }
