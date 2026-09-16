@@ -14,13 +14,14 @@
 ------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
-hl.monitor({
-	output = "",
-	mode = "preferred",
-	position = "auto",
-	scale = "1",
-})
-
+-- hl.monitor({
+-- 	output = "",
+-- 	mode = "preferred",
+-- 	position = "auto",
+-- 	scale = "1",
+-- })
+--
+require("monitors")
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------
@@ -28,6 +29,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal = "alacritty"
 local terminal2 = "kitty"
+local terminal3 = "ghostty"
 local fileManager = "nautilus"
 local file2 = "vicinae vicinae://launch/files/search"
 local menu = "vicinae toggle"
@@ -49,7 +51,8 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("hyprpaper")
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("vicinae server")
-	hl.exec_cmd("hyprsunset")
+	hl.exec_cmd("gsettings set org.gnome.desktop.wm.preferences button-layout :")
+	-- hl.exec_cmd("hyprsunset")
 	hl.exec_cmd("qs -c overview")
 	hl.exec_cmd("gnome-keyring-daemon --start --components=secrets")
 end)
@@ -89,13 +92,13 @@ hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
 	general = {
-		gaps_in = 0,
-		gaps_out = 0,
+		gaps_in = 1,
+		gaps_out = 1,
 
-		border_size = 0,
+		border_size = 3,
 
 		col = {
-			active_border = { colors = { "rgba(7E7C7EFF)" } },
+			active_border = { colors = { "rgba(FFFFFFAA)" } },
 			inactive_border = "rgba(595959aa)",
 		},
 
@@ -148,9 +151,12 @@ hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 1
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows", enabled = true, speed = 4.79, spring = "easy" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.1, spring = "easy", style = "popin 87%" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.49, bezier = "linear", style = "popin 87%" })
+
+hl.animation({ leaf = "windows",       enabled = true,  speed = 2.79, bezier = "quick" })
+hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 2.1,  bezier = "quick",         style = "popin 87%" })
+hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 1.49, bezier = "linear",       style = "popin 87%" })
+
+
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
 hl.animation({ leaf = "fade", enabled = true, speed = 3.03, bezier = "quick" })
@@ -296,14 +302,14 @@ hl.gesture({
 		hl.exec_cmd(menu)
 	end,
 })
-hl.gesture({
-	fingers = 3,
-	direction = "up",
-	action = function()
-		hl.exec_cmd(winoverview)
-	end,
-})
-
+-- hl.gesture({
+-- 	fingers = 3,
+-- 	direction = "up",
+-- 	action = function()
+-- 		hl.exec_cmd(winoverview)
+-- 	end,
+-- })
+--
 -- hl.gesture({
 --   fingers = 4,
 --   direction = "up",
@@ -421,6 +427,7 @@ hl.bind(
 hl.bind(mainMod .. " + KP_Delete", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(terminal2))
+hl.bind(mainMod .. " + G", hl.dsp.exec_cmd(terminal3))
 hl.bind(mainMod .. " + K", hl.dsp.window.close())
 -- local closeWindowBind = hl.bind(mainMod .. " + K", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
@@ -575,21 +582,22 @@ hl.window_rule({
 
 	no_focus = true,
 })
-
 -- Window Rules
 hl.window_rule({ match = { class = "brave-browser" }, opacity = "1.0 override" })
 hl.window_rule({ match = { class = "firefox" }, opacity = "1.0 override" })
-hl.window_rule({ match = { class = "Code" }, opacity = "0.9 override" })
+hl.window_rule({ match = { class = "Code" }, opacity = "1.0 override" })
+hl.window_rule({ match = { class = "code" }, opacity = "1.0 override" })
 hl.window_rule({ match = { class = "chromium" }, opacity = "1.0 override" })
 hl.window_rule({ match = { class = "spotify" }, workspace = "6" })
 hl.window_rule({ match = { class = "Spotify" }, workspace = "6" })
-hl.window_rule({ match = { class = "org.gnome.Nautilus" }, opacity = "0.8 override" })
+hl.window_rule({ match = { class = "org.gnome.Nautilus" }, opacity = "0.95 override" })
 hl.window_rule({ match = { class = "discord" }, workspace = "5 silent" })
 hl.window_rule({ match = { class = "com.gabm.satty" }, size = { 1000, 700 }, center = true, float = true })
 hl.window_rule({ match = { class = "com.obsproject.Studio" }, workspace = "8", border_color = "rgba(ff0000ff)" })
 hl.window_rule({ match = { class = "org.gnome.Calendar" }, float = true, size = { 836, 612 }, move = { 527, 49 } })
 hl.window_rule({ match = { class = "org.gnome.Loupe" }, float = true, center = true })
 hl.window_rule({ match = { class = "org.gnome.Papers" }, float = true })
+hl.window_rule({ match = { class = "Matplotlib"}, float = true, center=true })
 hl.window_rule({ match = { class = "xdg-desktop-portal-gtk" }, float = true })
 hl.window_rule({ match = { class = "org.gnome.Showtime" }, float = true, center = true })
 hl.window_rule({
@@ -606,7 +614,7 @@ hl.window_rule({
 	size = { 356, 777 },
 	move = { 1543, 186 },
 })
-hl.window_rule({ match = { title = "RAVE" }, float = true, size = { 356, 777 }, move = { 1543, 186 } })
+-- hl.window_rule({ match = { title = "RAVE" }, float = true, size = { 356, 777 }, move = { 1543, 186 } })
 -- hl.window_rule({ match = { class = "discord" },                   no_screen_share = true})
 
 -- Layer rules also return a handle.
@@ -646,3 +654,9 @@ hl.config({
 		focus_on_activate = true,
 	},
 })
+
+hl.layer_rule {
+    name = 'no-anim-for-selection',
+    match = { namespace = 'selection' },
+    no_anim = true,
+}

@@ -10,7 +10,7 @@
 
 {
    "$schema": "https://vicinae.com/schemas/config.json",
-   "close_on_focus_loss": true,
+   "close_on_focus_loss": false,
    "pop_to_root_on_close": true,
    "font": {
       "normal": {
@@ -30,10 +30,16 @@
    "launcher_window": {
       "opacity": 0.98,
       "client_side_decorations": {
-         "enabled": false
+         "enabled": true
+      },
+      "layer_shell": {
+         "enabled": true
       }
    },
    "favorites": [
+      "applications:code",
+      "applications:spotify-launcher",
+      "applications:com.mitchellh.ghostty",
       "applications:heroic",
       "applications:brave-browser",
       "applications:steam",
@@ -81,6 +87,22 @@
                "/usr/local/share/applications",
                "/usr/share/applications"
             ]
+         },
+         "entrypoints": {
+            "bvnc": {
+               "enabled": false
+            }
+         }
+      },
+      "browser-extension": {
+         "enabled": false
+      },
+      "calculator": {
+         "enabled": true,
+         "entrypoints": {
+            "refresh-rates": {
+               "enabled": true
+            }
          }
       },
       "clipboard": {
@@ -110,7 +132,7 @@
                "enabled": false
             },
             "inspect-local-storage": {
-               "enabled": true
+               "enabled": false
             },
             "keybind-settings": {
                "enabled": false
@@ -133,6 +155,9 @@
             "search-emojis": {
                "enabled": false
             },
+            "search-tray": {
+               "enabled": false
+            },
             "settings": {
                "enabled": true
             },
@@ -153,7 +178,20 @@
             "autoIndexing": true,
             "excludedPaths": "",
             "paths": "/home/salan",
-            "watcherPaths": ""
+            "watcherPaths": "",
+            "excludedIndexingPaths": [
+               "/home/salan/.anaconda",
+               "/home/salan/.cache",
+               "/home/salan/.conda",
+               "/home/salan/.icons",
+               "/home/salan/.local",
+               "/home/salan/.npm",
+               "/home/salan/.oh-my-zsh",
+               "/home/salan/.var"
+            ],
+            "indexingPaths": [
+               "/home/salan"
+            ]
          },
          "entrypoints": {
             "search": {
@@ -164,11 +202,17 @@
       "font": {
          "enabled": false
       },
+      "media": {
+         "enabled": false
+      },
       "power": {
          "enabled": false
       },
       "raycast-compat": {
          "enabled": true
+      },
+      "snippets": {
+         "enabled": false
       },
       "system": {
          "enabled": false

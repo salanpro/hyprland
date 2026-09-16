@@ -73,15 +73,15 @@
                 },
                 {
                     "label": "󰂯",
-                    "command": "hyprctl dispatch \"hl.dsp.exec_cmd('blueman-manager')\""
+                     "command": "~/.config/hypr/scripts/bluetoothswaync.sh"
                 },
                 {
                     "label": "",
                     "command": "systemctl reboot"
                 },
                 {
-                    "label": " ",
-                    "command": "~/.config/hypr/scripts/hypridle.sh"
+                    "label": "󰍃",
+                    "command": "~/.config/hypr/scripts/logout.sh"
                 },
                 {
                     "label": "",

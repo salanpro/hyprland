@@ -1,0 +1,12 @@
+qemu-system-x86_64 \
+  -enable-kvm \
+  -m 6G \
+  -cpu host \
+  -smp 4 \
+  -drive file=~/scripts/kali/kali-linux-2026.2-qemu-amd64.qcow2,format=qcow2 \
+  -net nic -net user,hostfwd=tcp::2222-:22 \
+  -vga virtio \
+  -display gtk,gl=on \
+  -audiodev pipewire,id=snd0 \
+  -device intel-hda \
+  -device hda-duplex,audiodev=snd0

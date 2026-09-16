@@ -11,17 +11,6 @@ cp vicinae/scripts/* ~/.config/hypr/scripts/
 echo "Copying vicinae-scripts"
 mkdir -p ~/.local/share/vicinae/scripts/
 cp vicinae/vicinae-scripts/* ~/.local/share/vicinae/scripts/.
-
-sudo pacman -S --needed base-devel
-cd ~/Downloads/gitclones/
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-
-paru vicinae-git
-paru wlogout
-paru quickshell-overview-git
-
 cd ~/Downloads/gitclones/
 git clone https://github.com/devmobasa/wayscriber.git
 cd ~/Downloads/gitclones/wayscriber
